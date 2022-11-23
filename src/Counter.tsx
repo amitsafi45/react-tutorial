@@ -1,35 +1,30 @@
 import React, { useState } from 'react'
-import {Button} from '@mui/material'
+import { Button } from '@mui/material'
 
-export function Counter ()  {
-const [count,setCount]=useState(()=>{
+export function Counter() {
+  const [count, setCount] = useState(() => {
 
-  console.log('i am in useState');
-  return 0
-})
+    return 0
+  })
 
- const decrementCount = () => {
-  console.log('i am in decrement');
-     
-  setCount(prevCount=>prevCount-1)
-}
+  const decrementCount = () => {
 
-const incrementCount = () => {
-  console.log('i am in increment');
-  
-  setCount(prevCount=>prevCount+1)
-}
+    setCount(prevCount => prevCount - 1)
+  }
+
+  const incrementCount = () => {
+
+    setCount(prevCount => prevCount + 1)
+  }
   return (
 
-<div className='container'>
-   
-    <Button variant="contained" size='small' onClick={decrementCount}>----</Button>
-    <span>{count}</span>
-    <Button variant="contained" size='small' onClick={incrementCount}>++++</Button>
-    
-      {/* <button>-</button>
-      <span>0</span>
-      <button>+</button> */}
+    <div className='container'>
+
+      <Button variant="contained" size='small' onClick={decrementCount}>----</Button>
+      <span>{count}</span>
+      <Button variant="contained" size='small' onClick={incrementCount}>++++</Button>
+
+
     </div>
   )
 }
