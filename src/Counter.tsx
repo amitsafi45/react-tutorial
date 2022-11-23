@@ -2,19 +2,22 @@ import React, { useState } from 'react'
 import {Button} from '@mui/material'
 
 export function Counter ()  {
-const [count,setCount]=useState(4)
-console.log('i am in useState');
+const [count,setCount]=useState(()=>{
+
+  console.log('i am in useState');
+  return 0
+})
 
  const decrementCount = () => {
   console.log('i am in decrement');
      
-  setCount(count-1)
+  setCount(prevCount=>prevCount-1)
 }
 
 const incrementCount = () => {
   console.log('i am in increment');
   
-  setCount(count+1)
+  setCount(prevCount=>prevCount+1)
 }
   return (
 
