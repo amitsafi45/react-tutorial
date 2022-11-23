@@ -1,5 +1,5 @@
 import React from 'react';
-import {Counter} from '../src/counter'
+import {Counter} from './Counter'
 function App() {
   return (
     <div className="App">
